@@ -14,7 +14,8 @@ class RootWidget(ScreenManager): # Pantalla principal que contiene todas las pan
 
 
 class SignUpScreen(Screen):
-    pass
+    def add_user(self, uname, pword):
+        print(uname, pword)
 
 class MainApp(App): # Clase principal de la app
     def build(self):
