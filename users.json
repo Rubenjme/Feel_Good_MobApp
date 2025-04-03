@@ -8,5 +8,10 @@
         "username": "user2",
         "password": "password2",
         "created": "2024-07-21 00:28:07.315781"
+    },
+    "usuario nuevo": {
+        "username": "usuario nuevo",
+        "password": "passnew",
+        "created": "2025-04-03 12-00-20"
     }
 }

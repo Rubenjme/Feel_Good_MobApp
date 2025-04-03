@@ -22,11 +22,17 @@ class SignUpScreen(Screen):
 
         users[uname] = {"username": uname, "password": pword, 
                         "created": datetime.now().strftime("%Y-%m-%d %H-%M-%S")}
-        print(users)
+        
+        with open("users.json", "w") as file: # Guardo los datos introducidos en el archivo json
+            json.dump(users, file)
+
+
+
 class MainApp(App): # Clase principal de la app
     def build(self):
         return RootWidget()
-    
+
+
 
 if __name__ == "__main__": 
     MainApp().run()
