@@ -25,7 +25,11 @@ class SignUpScreen(Screen):
         
         with open("users.json", "w") as file: # Guardo los datos introducidos en el archivo json
             json.dump(users, file)
+        self.manager.current = "sign_up_screen_success"
 
+
+class SignUpScreenSuccess(Screen):
+    pass
 
 
 class MainApp(App): # Clase principal de la app
