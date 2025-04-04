@@ -9,7 +9,12 @@ Builder.load_file("design.kv") # Carga el archivo kv
 class LoginScreen(Screen): # Pantalla de inicio de sesión
     def sign_up(self):
         self.manager.current = "sign_up_screen" # Cambia a la pantalla de registro
-
+    
+    def login(self, uname, pword):
+        with open("users.json") as file:
+            users = json.load(file)
+        if uname in users and users[uname]["password"] == pword: # Verifica si el usuario existe
+            self.manager.current = "login_screen_success"
 
 class RootWidget(ScreenManager): # Pantalla principal que contiene todas las pantallas
     pass
@@ -32,6 +37,13 @@ class SignUpScreenSuccess(Screen):
     def go_to_login(self):
         self.manager.transition.direction = "right"
         self.manager.current = "login_screen"
+
+
+class LoginScreenSuccess(Screen):
+    def log_out(self):
+        self.manager.transition.direction = "right"
+        self.manager.current = "login_screen"
+
 
 
 class MainApp(App): # Clase principal de la app
