@@ -7,7 +7,7 @@
             spacing:20, 20
             Label:
                 text: "User Login"
-                fotn_size: "20sp"
+                font_size: "20sp"
             TextInput:
                 id: username
                 hint_text: "Username"
@@ -88,10 +88,13 @@
         Button:
             text: "Enlighten me!"
             on_press: root.get_quote(root.ids.feeling.text)
-        Label:
-            id: quote
-            text: ""
-
+        ScrollView:
+            Label:
+                id: quote
+                text: ""
+                text_size: self.width, None # Para que el texto se ajuste al tamaño del label
+                size_hint_y: None
+                height: self.texture_size[1] # Para que el label se ajuste al tamaño del texto
 
 <RootWidget>:
     LoginScreen:

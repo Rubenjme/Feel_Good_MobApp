@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from hoverable import HoverBehavior
 from kivy.uix.image import Image
 from kivy.uix.behaviors import ButtonBehavior
+from kivy.animation import Animation
 import json, glob
 from datetime import datetime
 from pathlib import Path
@@ -21,6 +22,8 @@ class LoginScreen(Screen): # Pantalla de inicio de sesión
         if uname in users and users[uname]["password"] == pword: # Verifica si el usuario existe
             self.manager.current = "login_screen_success"
         else:
+            anim = Animation(color = (0.6, 0.7, 0.1, 1)) # Animación de error
+            anim.start(self.ids.login_wrong)
             self.ids.login_wrong.text = "Wrong username or password"
 
 class RootWidget(ScreenManager): # Pantalla principal que contiene todas las pantallas
@@ -66,7 +69,7 @@ class LoginScreenSuccess(Screen):
             self.ids.quote.text = "Try another feeling"
 
 
-class ImageButton(HoverBehavior, Image, ButtonBehavior): # Clase para el botón de la imagen
+class ImageButton(ButtonBehavior, HoverBehavior, Image): # Clase para el botón de la imagen
     pass
 
 class MainApp(App): # Clase principal de la app
