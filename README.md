@@ -12,10 +12,22 @@ Esta es una aplicación sencilla desarrollada con Kivy. La aplicación permite a
 - Interacción visual mediante imágenes y animaciones.
 
 ## Imágenes en funcionamiento
-![image](https://github.com/user-attachments/assets/d3184a04-8a56-4d8d-bdee-6f56242d58bf)
 
+- Pantalla de login:  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d3184a04-8a56-4d8d-bdee-6f56242d58bf">
+</div>
 
-![image](https://github.com/user-attachments/assets/2ee3b763-7083-4841-868c-93d36dec7efa)
+<br>
 
+- Pantalla tras login:  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2ee3b763-7083-4841-868c-93d36dec7efa">
+</div>
 
-![image](https://github.com/user-attachments/assets/eef4c80f-25ea-464a-9a0e-fe916ddfe2d7)
+<br>
+
+- Frase aleatoria tras introducir el estado de ánimo:  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/eef4c80f-25ea-464a-9a0e-fe916ddfe2d7">
+</div>
